@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk14:jdk-14.0.2_12
+FROM docker.io/adoptopenjdk/openjdk16-openj9:x86_64-alpine-jre-16.0.1_9_openj9-0.26.0
 RUN apk add curl
 
 COPY target/quarkus-app/lib/ /deployments/lib/
