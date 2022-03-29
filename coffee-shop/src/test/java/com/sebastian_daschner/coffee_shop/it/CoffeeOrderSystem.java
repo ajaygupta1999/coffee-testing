@@ -31,6 +31,8 @@ class CoffeeOrderSystem {
         JsonObject healthJson = retrieveHealthStatus();
 
         String status = healthJson.getString("status");
+        System.out.println("=====================> " + status);
+
         if (!"UP".equalsIgnoreCase(status))
             return false;
 
@@ -38,7 +40,7 @@ class CoffeeOrderSystem {
     }
 
     private JsonObject retrieveHealthStatus() {
-        return baseTarget.path("health")
+        return baseTarget.path("q/health")
                 .request(MediaType.APPLICATION_JSON_TYPE)
                 .get(JsonObject.class);
     }

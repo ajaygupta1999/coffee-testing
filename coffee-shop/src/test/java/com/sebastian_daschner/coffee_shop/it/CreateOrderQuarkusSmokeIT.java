@@ -16,7 +16,7 @@ class CreateOrderQuarkusSmokeIT {
 
     @BeforeEach
     void setUp() {
-        System.setProperty("coffee-shop.test.port", "8081");
+        System.setProperty("coffee-shop.test.port", "8001");
         coffeeOrderSystem = new CoffeeOrderSystem();
     }
 
