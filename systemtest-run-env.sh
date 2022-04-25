@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -euo pipefaill
 cd ${0%/*}/coffee-shop
 
 docker stop coffee-shop coffee-shop-db barista &> /dev/null || true
